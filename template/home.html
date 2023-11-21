@@ -1,0 +1,23 @@
+<!-- Utilizar el archivo base.html -->
+{% extends 'base.html' %}
+
+{% block titulo %} INDEX {% endblock%}
+
+{% block contenido %}
+
+
+<h1>Bienvenido a nuestra pagina</h1>
+
+<p>Esta es la pagina de inicio</p>
+<!-- Consultar si el usuario esta logeado -->
+{% if user.is_authenticated %}
+    <h2>Hola, puede cerrar sesión</h2>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+{% else %}
+    <h2>Hola, ud no esta logeado puede iniciar sesión</h2>
+    <a href="{% url 'login' %}">iniciar sesión</a>
+{% endif %}
+
+
+
+{% endblock%}
