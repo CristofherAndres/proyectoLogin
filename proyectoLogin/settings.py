@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'moduloUsuarios', #App dashboard y gestion de usuarios
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,6 @@ STATICFILES_DIRS = [STATIC_DIRS]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 """ Ruta post login """
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/dashboard"
 """ ruta pos logout """
 LOGOUT_REDIRECT_URL = "/"

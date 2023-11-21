@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block contenido%}
+
+{%if user.is_superuser%}
+<h1>Bienvenido eres el admin</h1>
+{%else%}  
+<h1>Bienvenido eres un usuario normal</h1>
+{%endif%}
+
+{% endblock %}
